@@ -1,0 +1,17 @@
+{
+  "name": "baguette",
+  "description": "API for GeoSmartCity marks",
+  "minimum-stability": "dev",
+  "license": "open source",
+  "authors": [
+    {
+      "name": "Guillaume Kleinpoort",
+      "email": "guillaume.kleinpoort@edu.turkuamk.fi"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
