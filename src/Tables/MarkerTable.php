@@ -8,12 +8,13 @@ use Models\MarkerModel;
 class MarkerTable
 {
     public static function getAllMarkers() {
-        $hunts = array();
-        foreach(Database::fetchAll("SELECT id, name, qr_code, clue1, clue2, clue3, comments, puzzle_id FROM hunts") as $hunt)
-        {
-            $hunts[] = (new MarkerModel($hunt["id"], $hunt["name"], $hunt["qrcode"], array($hunt["clue1"], $hunt["clue2"], $hunt["clue3"]), $hunt["comments"], PuzzlesTable::getPuzzle($hunt["puzzle_id"])))->toArray();
-        }
-        return $hunts;
+
+        //$markers = array();
+        //foreach(Database::fetchAll("SELECT mid, name, d_start, d_end, position, description, category, visible FROM marker") as $marker)
+        //{
+        //    $markers[] = (new MarkerModel($marker["mid"], $marker["name"], $marker["d_start"],$marker["d_end"] , $marker["position"], $marker["description"],$marker["category"],$marker["visible"]))->toArray();
+        //}
+        return "aze";
     }
 
     public static function getMarker($id) {
@@ -45,3 +46,4 @@ class MarkerTable
     }
 
 }
+?>

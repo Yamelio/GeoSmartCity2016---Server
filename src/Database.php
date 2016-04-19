@@ -8,7 +8,13 @@ class Database
     {
         if (!isset($connection))
         {
-            $connection = new PDO("mysql:host=http://amanda.dc.turkuamk.fi;dbname=geoguillaume;charset=utf8mb4","L3EUUXDwC6Rczpym");
+            $connection = new PDO(
+                'mysql:host=localhost;
+                dbname=geoguillaume;
+                charset=utf8mb4',
+                'geoguillaume',
+                'L3EUUXDwC6Rczpym'
+            );
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         return $connection;
@@ -37,3 +43,4 @@ class Database
         return $affected;
     }
 }
+?>
