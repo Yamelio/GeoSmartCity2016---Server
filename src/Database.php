@@ -36,6 +36,13 @@ class Database
         return $row;
     }
     
+    public static function execInser($sql)
+    {
+        $db = Database::getConnection();
+        $db->exec($sql);
+        return $db->lastInsertId();
+    }
+
     public static function exec($sql)
     {
         $db = Database::getConnection();
@@ -43,4 +50,3 @@ class Database
         return $affected;
     }
 }
-?>

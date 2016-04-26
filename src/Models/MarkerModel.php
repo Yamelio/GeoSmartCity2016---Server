@@ -139,4 +139,3 @@ class MarkerModel extends AbstractModel
     }
 
 }
-?>
